@@ -1,0 +1,88 @@
+/* style.css */
+
+/* General Body Styling */
+.Login-Page, .Signup-Page {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Form Container */
+.form-container {
+    text-align: center;
+}
+
+/* Form Title */
+.form-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Labels */
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Input Fields */
+.form-group input {
+    width: 95%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Button */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #7300ff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #822fe8;
+}
+
+/* Link to Signup Page */
+.form-container p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.form-container p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.form-container p a:hover {
+    text-decoration: underline;
+}

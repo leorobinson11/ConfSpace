@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #464677;
+  color: white;
+}
+.title {
+  font-size: 24px;
+  margin-inline-start: 150px;
+}
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+.btn-group a {
+  text-decoration: none;
+  padding: 10px 15px;
+  color: white;
+  background-color: #7876dd;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.btn-group a:hover {
+  background-color: #26254a;
+}
+footer {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(9, 9, 9);
+}
+
+.footer-content {
+  padding: 60px;
+  margin-left: 30%;
+}
+
+.footer-content ul {
+  list-style-type: none;
+  display:inline-block;
+  line-height: 200%;
+}
+
+.footer-content li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+#copywritebox {
+  padding: 50px;
+  border-top: 1px solid rgb(33, 32, 32);
+  text-align: center;
+}
+
+#copywrite {
+  color: white;
+  font-size: 20px;
+}

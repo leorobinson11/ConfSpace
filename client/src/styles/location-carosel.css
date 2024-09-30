@@ -1,0 +1,42 @@
+/* style.css */
+
+.carousel-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+.carousel-item {
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Adjust to the height of your choice */
+  }
+  
+  /* Circular div styling */
+  .circle {
+    width: 150px;
+    height: 150px;
+    background-color: #464677;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Add hover effect for interactivity */
+  .circle:hover {
+    transform: scale(1.1);
+  }
+  
+  .circle p {
+    margin: 0;
+  }
+  
