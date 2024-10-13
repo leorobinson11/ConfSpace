@@ -1,0 +1,70 @@
+.room-detail {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  h1 {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Container for image and booking section */
+  .room-detail-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  /* Image styling */
+  .room-detail-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  /* Booking section to the right of the image */
+  .room-booking {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 100px;
+  }
+  
+  
+  .book-room-btn {
+    padding: 10px 15px;
+    background-color: #5e58e3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .book-room-btn:hover {
+    background-color: #3932b4;
+  }
+  
+  /* Room details text */
+  .room-detail p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  
+.date-picker {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 80px;
+    margin-bottom: 15px;
+  }

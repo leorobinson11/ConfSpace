@@ -4,18 +4,16 @@ import './styles/hero.css';
 import './styles/login.css';
 import LocationsCarosel from './components/location-carosel';
 import Seachrbar from './components/searchbar';
+import Header from "./components/header";
+import Footer from "./components/footer";
+import RoomList from "./components/room-list"
+import RoomDetails from './components/room-details';
 
 
 const HomePage = () => {
   return (
     <div className="App">
-      <header>
-        <div class="title"> ConfSpace </div>
-        <div class="btn-group">
-            <a href="/login" class="login-btn">Login</a>
-            <a href="/signup" class="register-btn">Register</a>
-        </div>
-      </header>
+      <Header />
 
       <section class="hero">
         <div class="hero-text">
@@ -24,43 +22,13 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section class="search-section">
-        <div class="search-box">
-          <Seachrbar />
-          <input type="date" />
-          <input type="number" placeholder="People" min="1" max="100" />
-          <button type="button">Search</button>
-        </div>
-      </section>
+      <Seachrbar />
 
       <section class="popularplaces-section">
             <LocationsCarosel />
       </section>
       
-      <footer>
-          <div id="footer-box">
-            <div class="footer-content">
-               <div class="links">
-                  <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#socials">Socials</a></li>
-                    <li><a href="#socials">Contact</a></li>
-                  </ul>
-                  <ul>
-                    <li><a href="leorobinsonvienna@gmail.com"> Gmail </a></li>
-                    <li><a href="https://www.linkedin.com/in/leo-robinson-437a46283/"> LinkedIn</a></li>
-                    <li><a href="https://github.com/leorobinson11/"> GitHub </a></li>
-                    <li><a href="https://www.instagram.com/rleo228/?hl=en"> Instagram </a></li>
-                  </ul>
-                </div>
-              </div>
-              <div id="copywritebox">
-                  <span id="copywrite"> © 2023 All Rights Reserved by Leo Robinson </span>
-              </div>
-            </div>
-        </footer>
-
+      <Footer />
     </div>
   );
 }
@@ -113,7 +81,7 @@ const SignupPage = () => {
                     <input type="password" id="confirm-password" placeholder="Confirm your password" required />
                 </div>
                 <button type="submit" class="btn">Sign Up</button>
-                <p>Already have an account? <a href="login">Login here</a></p>
+                <p>Already have an account? <a href="logi">Login here</a></p>
             </form>
         </div>
       </div>
@@ -121,12 +89,55 @@ const SignupPage = () => {
   );
 }
 
+const rooms = [
+  {
+    id: 1,
+    image: 'https://via.placeholder.com/100',
+    title: 'Cozy Apartment',
+    location: 'New York, USA',
+    rating: 4.5,
+    price: 120,
+  },
+  {
+    id: 2,
+    image: 'https://via.placeholder.com/100',
+    title: 'Modern Studio',
+    location: 'Los Angeles, USA',
+    rating: 4.2,
+    price: 150,
+  },
+  {
+    id: 3,
+    image: 'https://via.placeholder.com/100',
+    title: 'Beach House',
+    location: 'Miami, USA',
+    rating: 4.8,
+    price: 200,
+  },
+];
+
 const RoomListing = () => {
   return (
     <div className="Room-Listing">
-      Room Listing
+      <Header />
+      <h1 class="listingtitle-h1"> Room Listing </h1>
+      <Seachrbar />
+      <RoomList rooms={rooms} />
+      <Footer />
     </div>
   );
+}
+
+
+
+const Room = () => {
+  return (
+    <div>
+      <Header />
+      <RoomDetails rooms={rooms} />
+      <Footer />
+    </div>
+  )
 }
 
 const App = () => {
@@ -136,7 +147,8 @@ const App = () => {
           <Route index element={<HomePage />} />
           <Route path="login" element={<LoginPage />} />
           <Route path="signup" element={<SignupPage />} />
-          <Route path="roomlistings/:city" element={<RoomListing />} />
+          <Route path="roomlistings" element={<RoomListing />} />
+          <Route path="room/:id" element={<Room />} />
       </Routes>
     </BrowserRouter>
   )

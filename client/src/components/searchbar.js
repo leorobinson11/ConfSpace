@@ -14,7 +14,7 @@ const popularPlaces = [
     'Toronto',
 ];
 
-const Seachrbar = () => {
+const RecomendationSearchbar = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [showDropdown, setShowDropdown] = useState(false);
     const [filteredPlaces, setFilteredPlaces] = useState(popularPlaces);
@@ -83,5 +83,20 @@ const Seachrbar = () => {
         </div>
     );
 };
+
+
+const Seachrbar = () => {
+    return (
+        <section class="search-section">
+            <div class="search-box">
+                <RecomendationSearchbar />
+                <input type="date" />
+                <input type="number" placeholder="People" min="1" max="100" />
+                <button type="button">Search</button>
+            </div>
+        </section>
+    );
+}
+
 
 export default Seachrbar;
